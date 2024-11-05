@@ -1,0 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,800;1,100&display=swap');
+
+:root {
+    --cor-de-fundo: #FBF8CC;
+    --dark-blue: #03045E;
+    --yellow: #F5EE84;
+    --dark-brown: #474306;
+    --error-color: #dc3545;
+    --sucess-color: #28a745;
+    --warning-color: #ffc107;
+}
+
+* {
+	margin:0px;
+}
+
+body {
+	background-color: var(--cor-de-fundo);
+}
+
+main {
+    margin: 20px;
+}
+
+#cabecalho-home h5 {
+    float: left;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--dark-blue);
+}
+
+#cabecalho-home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menu {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    color: var(--dark-blue);
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+ul {
+    padding-inline-start: 0px;
+}
+
+#menu a {
+    text-decoration: none;
+    color: var(--dark-blue);
+}
+
+#redes-sociais {
+    display: flex;
+    gap: 20px;
+    float: right;
+}
+
+#conteudo-home {
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#saudacao {
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--dark-blue);
+}
+
+p .page-inicial {
+    font-size: 80px;
+    font-weight: bold;
+
+}
+
+button {
+    background-color: var(--yellow);
+    border: 1px solid var(--dark-brown);
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 10px;
+    margin-inline-start: 150px;
+    color: var(--dark-brown);
+    width: 164px;
+    cursor: pointer;
+}
+
+button a {
+    text-decoration: none;
+    color: var(--dark-brown);
+}
+
+button:hover {
+    background-color: var(--dark-brown);
+}
+
+button:hover a {
+    color: var(--yellow);
+}
+
+#conteudo-about h1 {
+    padding-top: 150px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 80px;
+    font-weight: bold;
+    color: var(--yellow);
+}
+
+#conteudo-about p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    padding-inline-start: 50px;
+    color: var(--dark-blue);
+}
+
+#conteudo-about h3 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: bold;
+    color: var(--yellow);
+}
+
+#lista-experiencia {
+    padding-inline-start: 150px;
+    text-align: justify;
+}
+
+#lista-experiencia li {
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--dark-blue);
+}
+
+#paragrafo-habilidades-experiencia {
+    padding-inline-start: 50px;
+}
+
+footer {
+    margin: 0px;
+    text-align: center;
+    padding: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    background-color: var(--dark-blue);
+}
+
+/* Página de Formulário */
+.body-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-formulario {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 80px;
+    font-weight: bold;
+    color: var(--yellow);
+    padding-top: 20px;
+}
+form {
+    padding: 10px 20px;
+    width: 80%;
+}
+
+.container-formulario {
+    justify-items: center;
+    background-color: #fff;
+    padding: 15px;
+    margin-top: 15px;
+    width: 400px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.campo-formulario input {
+    border: solid 2px #f0f0f0;
+    padding: 10px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    display: block;
+    width: 100%;
+}
+
+.campo-formulario input:focus {
+    outline: solid 2px var(--dark-brown);
+}
+
+.campo-formulario {
+    margin-bottom: 5px;
+}
+
+.campo-formulario label {
+    display: block;
+    color: var(--dark-brown);
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 5px;
+}
+
+.campo-formulario.error input {
+    border-color: var(--error-color);
+}
+
+.campo-formulario.success input {
+    border-color: var(--sucess-color);
+}
+
+.campo-formulario small {
+    color: var(--error-color);
+}
+
+.input-group {
+    position: relative;
+}
+
+.btn {
+    width: 75%;
+    padding: 3%;
+    border-radius: 20px;
+    z-index: auto;
+    background-color: var(--yellow);
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: var(--dark-brown);
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--dark-brown);
+    color: var(--yellow);
+}
+
+.btn:focus {
+    outline: none;
+    border: none;
+}
+
+.footer-page-form {
+    width: 98.7%;
+    margin-top: 6.15%;
+}
+
+/*Estilizado página de confirmação*/
+
+#titulo-confirmado {
+    color: var(--yellow);
+    font-family: 'Poppins', sans-serif;
+    font-size: 80px;
+    text-align: center;
+    margin-top: 10%;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#botao-download {
+    margin-top: 80px;
+    margin-inline-start: 44%;
+}
+
+#botao-download:hover {
+    color: var(--yellow);
+}

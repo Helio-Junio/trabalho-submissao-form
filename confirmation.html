@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="/image/favicon.ico" type="image/x-icon">
+    <title>Confirmado</title>
+</head>
+<body>
+    <main>
+        <header id="cabecalho-home">
+            <h5>Hélio Ferreira</h5>
+            <ul id="menu">
+                <li><a href="index.html"> Início </a></li>
+                <li><a href="#conteudo-about"> Sobre mim </a></li>
+            </ul>
+            <span id="redes-sociais">
+            <!-- instagram -->
+            <a href="https://www.instagram.com/heliojunio_1/" target="_blank"><img src="image/instagram.png" alt="icone instagram" width="24px"></a>
+            <!-- linkedin -->
+            <a href="https://www.linkedin.com/in/helio-junio/" target="_blank"><img src="image/linkedin.png" alt="icone linkedin" width="24px"></a>
+            <!-- github -->
+            <a href="https://github.com/Helio-Junio" target="_blank"><img src="image/github.png" alt="icone github" width="24px"></a>
+            </span>
+        </header>
+        <div id="conteudo-confirmation">
+            <h1 id="titulo-confirmado">Formulário Confirmado</h1>
+            <button id="botao-download" onclick="downloadJson(json)">Download</button>
+        </div>
+    </main>
+</body>
+
+<script>
+
+    function downloadJson(exportJson) {
+        var dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(exportJson);
+        var downloadAnchorNode = document.createElement('a');
+        downloadAnchorNode.setAttribute("href", dataStr);
+        downloadAnchorNode.setAttribute("download", "data.json");
+        document.body.appendChild(downloadAnchorNode); // required for firefox
+        downloadAnchorNode.click();
+        downloadAnchorNode.remove();
+
+        // Retorna para a página inicial.
+        window.location.href = "index.html";
+    }
+
+    // Obtem item salvo na memoria local.
+    const json = localStorage.getItem('form');
+
+    const objeto = JSON.parse(json);
+
+    for (key in objeto) {
+        const markup = `
+        <div>
+            <span style='font-family: "Poppins", sans-serif'>${key} : ${objeto[key]}</span>
+        </div>
+        `;
+        document.querySelector('#conteudo-confirmation').innerHTML += markup;
+    }
+
+</script>
+</html>
