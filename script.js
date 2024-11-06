@@ -48,7 +48,7 @@ const isEmailValid = (email) => {
 // Valida o campo do usuario
 const checkUsername = () => {
     let valid = false;
-    const min = 3, max = 25;
+    const min = 3, max = 50;
     const usuarioVal = usuario.value.trim();
 
     if (!isRequired(usuarioVal)) {
@@ -140,6 +140,3 @@ form.addEventListener('submit', function (e) {
         window.location.href = "./confirmation.html";
     }
 });
-
-
-
