@@ -56,7 +56,7 @@ const checkUsername = () => {
     } else if (!isBetween(usuarioVal.length, min, max)) {
         showsError (usuario, `Nome deve ter entre ${min} e ${max} caracteres.`);
     } else {
-        showsSuccess (usuario);
+        showsSuccess(usuario);
         valid = true;
     }
     return valid;
@@ -71,9 +71,9 @@ const checkSobrenome = () => {
     if (!isRequired(sobrenomeVal)) {
         showsError(sobrenome, 'Sobrenome não pode ficar em branco.');
     } else if (!isBetween(sobrenomeVal.length, min, max)) {
-        showsError (sobrenome, `Sobrenome deve ter entre ${min} e ${max} caracteres.`);
+        showsError(sobrenome, `Sobrenome deve ter entre ${min} e ${max} caracteres.`);
     } else {
-        showsSuccess (sobrenome);
+        showsSuccess(sobrenome);
         valid = true;
     }
     return valid;
@@ -106,7 +106,7 @@ const checkIdade = () => {
     } else if (!isPositive(idadeVal)) {
         showsError (idade, `Idade deve ter entre ${min} e ${max} anos.`);
     } else {
-        showsSuccess (idade);
+        showsSuccess(idade);
         valid = true;
     }
     return valid;
